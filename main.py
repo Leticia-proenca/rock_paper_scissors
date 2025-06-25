@@ -2,38 +2,56 @@
 import random 
 
 choices = ["rock","paper", "scissors"]
-print(choices)
+user = 0
+computer = 0
+
 while True:
-    print("press 4 to exit program")
-    answer = input("What do you want to chose? ").lower
-    # aswer validation
-    while answer!= "rock" or answer!="paper" or answer !="scissors":
+    print("1- Rock \n2- Paper \n3- Scissors \n4- Score \n5-Exit")
+    answer = int(input("What do you want to chose? "))
+    #answer validatiom
+    while answer > 5 or answer < 1:
         print("Wrong input, try again")
-        answer = input("What do you want to chose? ").lower
+        answer = int(input("What do you want to chose? "))
 
-    random_choice = choices.random 
+    random_choice = random.choice(choices) 
+    print(f"Computer choice: {random_choice}")
 
-    if random_choice == answer:
-        print("Tie!")
-    #rock 
-    if answer == "rock" and random_choice == "paper":
-        print("You won!")
-    if answer == "rock" and random_choice == "scissors":
-        print("You lost.")
+        #rock 
+    if answer == 1 and random_choice == "paper":
+        print("You won!\n")
+        user += 1
+    if answer == 1 and random_choice == "scissors":
+        print("You lost!\n")
+        computer += 1
+    if answer == 1 and random_choice == "rock":
+        print("Tie!\n")
 
-    #paper
-    if answer == "paper" and random_choice == "rock":
-        print("You won!")
-    if answer == "paper" and random_choice == "scissors":
-        print("You lost.")
+        #paper
+    if answer == 2 and random_choice == "rock":
+        print("You won!\n")
+        user += 1
+    if answer == 2 and random_choice == "scissors":
+        print("You lost\n")
+        computer += 1
+    if answer == 2 and random_choice == "paper":
+        print("Tie!\n")
 
-    #scissors
-    if answer == "scissors" and random_choice == "paper":
-        print("You won!")
-    if answer == "scissors" and random_choice == "rock":
-        print("You lost.")
+        #scissors
+    if answer == 3 and random_choice == "paper":
+        print("You won!\n")
+        user += 1
+    if answer == 3 and random_choice == "rock":
+        print("You lost\n")
+        computer += 1
+    if answer == 3 and random_choice == "scissors":
+        print("Tie!\n")
 
-    #exut program
     if answer == 4:
+        print("SCORES")
+        print(f"User= {user}")
+        print(f"Computer = {computer}\n")
+
+        #exit program
+    if answer == 5:
         print("Leaving...")
         exit()
