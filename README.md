@@ -1,2 +1,2 @@
 # rokc_paper_scissors
-A rock paper scissors game
+A simple rock paper scissors game
