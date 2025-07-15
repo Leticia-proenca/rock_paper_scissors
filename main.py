@@ -17,34 +17,37 @@ while True:
     print(f"Computer choice: {random_choice}")
 
         #rock 
-    if answer == 1 and random_choice == "paper":
-        print("You won!\n")
-        user += 1
-    if answer == 1 and random_choice == "scissors":
-        print("You lost!\n")
-        computer += 1
-    if answer == 1 and random_choice == "rock":
-        print("Tie!\n")
+    while answer == 1:
+        if random_choice == "paper":
+            print("You won!\n")
+            user += 1
+        if random_choice == "scissors":
+            print("You lost!\n")
+            computer += 1
+        if random_choice == "rock":
+            print("Tie!\n")
 
         #paper
-    if answer == 2 and random_choice == "rock":
-        print("You won!\n")
-        user += 1
-    if answer == 2 and random_choice == "scissors":
-        print("You lost\n")
-        computer += 1
-    if answer == 2 and random_choice == "paper":
-        print("Tie!\n")
+    while answer == 2:
+        if random_choice == "rock":
+            print("You won!\n")
+            user += 1
+        if random_choice == "scissors":
+            print("You lost\n")
+            computer += 1
+        if random_choice == "paper":
+            print("Tie!\n")
 
         #scissors
-    if answer == 3 and random_choice == "paper":
-        print("You won!\n")
-        user += 1
-    if answer == 3 and random_choice == "rock":
-        print("You lost\n")
-        computer += 1
-    if answer == 3 and random_choice == "scissors":
-        print("Tie!\n")
+    while answer == 3:
+        if random_choice == "paper":
+            print("You won!\n")
+            user += 1
+        if random_choice == "rock":
+            print("You lost\n")
+            computer += 1
+        if random_choice == "scissors":
+            print("Tie!\n")
 
     if answer == 4:
         print("SCORES")
