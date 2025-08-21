@@ -1,2 +1,3 @@
 # rokc_paper_scissors
 A simple rock paper scissors game
+* One of my first projects *
